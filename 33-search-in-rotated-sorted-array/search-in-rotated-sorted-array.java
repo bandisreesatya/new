@@ -1,17 +1,30 @@
 class Solution {
     public int search(int[] nums, int target) {
         int n=nums.length;
-        HashMap<Integer,Integer> hash=new HashMap<>();
-        int j=0;
-        for(int i=0;i<n;i++)
+        int l=0;
+        int r=n-1;
+        while(l<=r)
         {
-        hash.put(nums[i],j);
-        j++;
+            int mid=l+(r-l)/2;
+            if(nums[mid]==target)
+                return mid;
+            if(nums[l]<=nums[mid])
+            {
+                if(nums[l]<=target&&target<=nums[mid])
+                   r=mid-1;
+                else
+                   l=mid+1;
+                  
+            }
+            else
+            {
+                if(nums[mid]<=target&&target<=nums[r])
+                   l=mid+1;
+                else
+                   r=mid-1;
+            }
         }
-        if(hash.containsKey(target))
-          return hash.get(target);
-        else
-          return -1;
+        return -1;
 
         
     }
