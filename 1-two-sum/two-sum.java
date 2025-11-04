@@ -4,19 +4,19 @@ class Solution {
         HashMap<Integer,Integer> hash=new HashMap<>();
         //int j=0;
             int[] a=new int[2];
-       for(int i=0;i<n;i++)
-       {
-        for(int j=i+1;j<n;j++)
+        for(int i=0;i<n;i++)
         {
-            if(nums[i]+nums[j]==target)
-            {
-               a[0]=i;
-               a[1]=j;
-               // break;
-            }
+            int s=target-nums[i];
+            if(hash.containsKey(s))
+              {
+                a[0]=hash.get(s);
+                a[1]=i;
+                break;
+              }
+              hash.put(nums[i],i);
+            
         }
-       }
-       return a;
+        return a;
 
         
 
