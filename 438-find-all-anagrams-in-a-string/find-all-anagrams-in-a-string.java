@@ -18,15 +18,11 @@ class Solution {
             if((j-i+1)==n)
             {
                 if(Arrays.equals(freq,curr_freq))
-                {
                     list.add(i);
-                }
                 curr_freq[s.charAt(i)-'a']--;
                 i++;
             }      
         }
         return list;
-
-        
     }
 }
