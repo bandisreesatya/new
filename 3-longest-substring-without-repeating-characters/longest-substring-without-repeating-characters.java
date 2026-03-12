@@ -7,8 +7,7 @@ class Solution {
         {
             char ch=s.charAt(j);
             map.put(ch,1+map.getOrDefault(ch,0));
-            if(map.get(ch)<=1)
-                max=Math.max(max,j-i+1);
+            if(map.get(ch)<=1)  max=Math.max(max,j-i+1);
             else
             {
                 while(i<=j)
