@@ -15,7 +15,7 @@ class Solution {
         int a=0,b=0,sum=0,c=0,d=0;
         ListNode temp=new ListNode();
         ListNode tail=temp;
-        while(t1!=null||t2!=null){
+        while(t1!=null||t2!=null||c>0){
             a=(t1==null)?0:t1.val;
             b=(t2==null)?0:t2.val;
             sum=a+b+c;
@@ -27,10 +27,6 @@ class Solution {
             if(t1!=null) t1=t1.next;
             if(t2!=null) t2=t2.next;
 
-        }
-        if(c!=0){
-            tail.next=new ListNode(c);
-            tail=tail.next;
         }
         return temp.next;
     }
