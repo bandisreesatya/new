@@ -13,7 +13,6 @@ class Solution {
                 grid[i][j]=grid[i][j]+ Math.min(grid[i-1][j],grid[i][j-1]);
             }
         }
-        return grid[r-1][c-1];
-        
+        return grid[r-1][c-1];   
     }
 }
