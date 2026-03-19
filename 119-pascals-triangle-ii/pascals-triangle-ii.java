@@ -14,7 +14,7 @@ class Solution {
     }
     public List<Integer> getRow(int rowIndex) {
         List<Integer> list=new ArrayList<>();
-        for(int i=0;i<=rowIndex;i++){
+        for(int i=0;i<rowIndex+1;i++){
             list.add(arr[rowIndex][i]);
         }
         return list;
