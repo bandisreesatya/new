@@ -19,8 +19,8 @@ class Solution {
         if(c==n){
             return head.next;
         }
-        temp=head;
         ListNode prev=head;
+        temp=head;
         for(int i=0;i<(c-n);i++){
             prev=temp;
             temp=temp.next;
